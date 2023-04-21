@@ -57,7 +57,7 @@ const Weather = (props) => {
               placeholder="Search..."
             />
           </form>
-          <button className="px-4 text-white bg-[#5E82F4] rounded-full ">
+          <button className="px-4 text-white bg-[#5E82F4] rounded-full hover:bg-purple-500 transform transition duration-500 hover:scale-110 hover:-translate-y-1 hover:rotate-2 hover:skew-x-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-5 h-5"
@@ -182,7 +182,7 @@ const Weather = (props) => {
       ) : weatherData ? (
         // first div temprature location text
         <div className="flex justify-center items-center py-4 ">
-          <div className="w-72 h-96 bg-[#DAE3FD]  px-4 py-5  rounded-lg">
+          <div className="w-72 h-96 bg-[#DAE3FD]  px-4 py-5  rounded-lg transform transition duration-500 hover:scale-110 hover:-translate-y-1 hover:rotate-2 hover:skew-x-1">
             <div className='flex justify-between'>
               <div className="left">
                 <p className='text-5xl text-gray-500'>{weatherData.current.temp_c}&deg;</p>

@@ -7,7 +7,7 @@ function App(props) {
     <div className='flex flex-col min-h-screen'>
     {/* <Search /> */}
      <Weather apiKeyProps="9ec25d2accmsha2f4b9a8bf1feccp12fd72jsn7fa8b52e09eb" /> 
-     <Footer name="pratyushsingha"/>
+     <Footer name="pratyushsingha &#x2764;"/>
     </div>
   )
 }
