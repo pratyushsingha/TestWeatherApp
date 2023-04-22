@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import process from 'process/browser';
+import moment from 'moment';
 import humidity from "../assets/humidity.svg"
 import visibility from "../assets/visibility.svg"
 import wind from "../assets/wind.svg"
@@ -217,6 +218,16 @@ const Weather = (props) => {
             <div className='flex  justify-center items-center -mt-3'>
               <img className='w-10' src={wind} alt="" />
               <span className='text-gray-500 text-lg '>Wind Speed:{weatherData.current.wind_kph} Km</span>
+            </div>
+
+            {/* time */}
+            <div className="flex justify-between mt-28">
+              <div className="date">
+                <p className='text-gray-400'>{moment().format('LL')}</p>
+              </div>
+              <div className='flex justify-end items-end '>
+                <p className='text-gray-400'>{moment().format('LTS')}</p>
+              </div>
             </div>
           </div>
         </div>
