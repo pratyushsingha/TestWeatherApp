@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import process from 'process/browser';
 import humidity from "../assets/humidity.svg"
 import visibility from "../assets/visibility.svg"
 import wind from "../assets/wind.svg"
+const apiKey = import.meta.env.VITE_MY_API_KEY;
+
 
 const Weather = (props) => {
   const [location, setLocation] = useState('kolkata');
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
   // with props
-  const apiKey = props.apiKeyProps;
+  // const apiKey = props.apiKeyProps;
 
   useEffect(() => {
 
@@ -33,7 +36,7 @@ const Weather = (props) => {
     setWeatherData(null);
     axios.get(`https://weatherapi-com.p.rapidapi.com/current.json?q=${location}`, {
       headers: {
-        'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
+        'X-RapidAPI-Key': apiKey,
         'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
       }
     })
