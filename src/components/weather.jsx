@@ -33,7 +33,7 @@ const Weather = (props) => {
     setWeatherData(null);
     axios.get(`https://weatherapi-com.p.rapidapi.com/current.json?q=${location}`, {
       headers: {
-        'X-RapidAPI-Key': apiKey,
+        'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
         'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
       }
     })

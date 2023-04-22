@@ -10,7 +10,7 @@ function Footer(props) {
                 © 2023 Copyright: 
                 <a
                     className="text-neutral-800 hover:text-blue-800"
-                    href="https://github.com/pratyushsingha/" target='_blank'
+                    href={props.github} target='_blank'
                 > <strong>{props.name}</strong>
                 </a
                 >
