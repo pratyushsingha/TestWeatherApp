@@ -5,7 +5,7 @@ import moment from 'moment';
 import humidity from "../assets/humidity.svg"
 import visibility from "../assets/visibility.svg"
 import wind from "../assets/wind.svg"
-const apiKey = import.meta.env.VITE_MY_API_KEY;
+const apiKey = "9ec25d2accmsha2f4b9a8bf1feccp12fd72jsn7fa8b52e09eb";
 
 
 const Weather = (props) => {
