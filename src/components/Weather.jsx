@@ -5,7 +5,7 @@ import moment from 'moment';
 import humidity from "../assets/humidity.svg"
 import visibility from "../assets/visibility.svg"
 import wind from "../assets/wind.svg"
-// const apiKey = "9ec25d2accmsha2f4b9a8bf1feccp12fd72jsn7fa8b52e09eb";
+const apiKey = import.meta.env.VITE_MY_API_KEY;
 
 
 const Weather = (props) => {
@@ -19,7 +19,7 @@ const Weather = (props) => {
 
     axios.get(`https://weatherapi-com.p.rapidapi.com/current.json?q=${location}`, {
       headers: {
-        'X-RapidAPI-Key': "9ec25d2accmsha2f4b9a8bf1feccp12fd72jsn7fa8b52e09eb",
+        'X-RapidAPI-Key': apiKey,
         'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
       }
     })
@@ -37,7 +37,7 @@ const Weather = (props) => {
     setWeatherData(null);
     axios.get(`https://weatherapi-com.p.rapidapi.com/current.json?q=${location}`, {
       headers: {
-        'X-RapidAPI-Key': "9ec25d2accmsha2f4b9a8bf1feccp12fd72jsn7fa8b52e09eb",
+        'X-RapidAPI-Key': apiKey,
         'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
       }
     })
@@ -238,4 +238,3 @@ const Weather = (props) => {
 };
 
 export default Weather;
-
